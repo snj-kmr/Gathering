@@ -1,0 +1,134 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            FAQs
+            <small>List</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li class="active">FAQs List</li>
+        </ol>
+    </section>
+    <div class="form-group">
+        <div class="alert alert-success" ng-show="del">
+            <strong ng-bind="del" ></strong> 
+        </div>
+    </div>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <div class="col-xs-12">
+
+
+
+                <div class="box">
+                    <div class="box-header">
+                        <h3 class="box-title">FAQs List</h3>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <table id="example1" class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Sr. no</th>  
+                                    <th>FAQs</th>                                  
+                                    <th>FAQS Arabic</th>                         
+                                    <th>Type</th>       
+                                    <th>Created</th>
+                                    <th>Edit</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
+                                             
+                                    <!--<th>Provides in</th>-->
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr ng-repeat='text in texts track by $index'>
+                                    <td ng-class="'{{text._id}}'">{{$index + 1}}</td>
+                                                                                
+                                    <td ng-class="'{{text._id}}'">{{text.question}} </td>                                              
+                                    <td ng-class="'{{text._id}}'">{{text.ar_question}}</td>
+                                    <td ng-class="'{{text._id}}'">{{text.type}}</td>      
+                                    <td ng-class="'{{text._id}}'">{{text.created_at | date}}</td>     
+                                    <td ng-class="'{{text._id}}'">
+                                        <a ui-sref="editFaqs({paraml:text._id})">
+                                            <i class="fa fa-edit"></i>Edit</a></td>  
+
+                                            <td ng-class="'{{text._id}}'" ng-click='setActive(text)' style="cursor: pointer">
+
+                                        View</td> 
+                                    <td ng-click="deleteFaqs(text._id)" ng-class="'{{text._id}}'" ng-show="{{text.type!='admin'}}" style="cursor: pointer">
+
+                                        Delete</td>       
+                                </tr>                                
+                            </tbody>
+                            <!--<tfoot>
+                                <tr>
+                                    <th>Sr. no</th>                                    
+                                    <th>Email</th>
+                                    <th>Dob</th>
+                                    <th>Created</th>
+                                    <th>Edit</th>
+                                    <th>View</th>
+                                    <th>Delete</th>
+                                </tr>
+                            </tfoot>-->
+                        </table>
+                    </div>
+                    <div class='col-sm-8 full-height'>
+                        <div ng-show="activeText.type">
+
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="box">
+                                        <div class="box-header">
+                                            
+                                            <h2 class="box-title">FAQS</h2>
+                                            <h3 class="box-title">{{activeText.type}}</h3>
+
+
+                                        </div>
+                                        <!-- /.box-header -->
+                                        <div class="box-body table-responsive no-padding">
+                                            <table class="table table-hover">
+                                                <tr>
+                                                    <th>Fields</th>
+                                                    <th>English</th>
+                                                     <th>Arabic</th>
+                                                </tr>
+                                                <tr>
+                                                    <th>Question</th>
+                                                    <td>{{activeText.question}}</td>
+                                                    <td>{{activeText.ar_question}}</td>
+                                                </tr>
+                                                <tr>
+                                                    <th>Answer</th>
+                                                    <td>{{activeText.answer}}</td>
+                                                    <td>{{activeText.ar_answer}}</td>
+                                                </tr>
+                                                 <tr>
+                                                    <td>Created on</td>
+                                                    <td>{{activeText.created_at | date }}</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                        <!-- /.box-body -->
+                                    </div>
+                                    <!-- /.box -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </section>
+    <!-- /.content -->
+</div>

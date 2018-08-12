@@ -1,0 +1,33 @@
+    <header id="section-header" class="navbar-fixed-top transition page-header new page-header-semi-transparent ng-scope">
+        <section class="container">
+            <div class="navbar-header language">
+                <ul>
+                    <li><a href="#" ng-click="changeLanguage('en')" tabindex="0">English</a></li>
+                    <li><a href="#" ng-click="changeLanguage('ar')" tabindex="0">Arabic</a></li>
+                </ul>
+            </div>
+            <div class="logo-pic">
+                <a href="#">
+                <img src="/home/images/logo2.png" onclick="window.location.href='/';" alt=""/>
+                <p>Gathering</p> 
+                </a>
+            </div>
+        </section>
+    </header>
+    <section class="faq">
+        <div class="container">
+           <h4 ng-if="language=='ar'" class="heading">أسئلة العملاء</h4>
+           <h4 ng-if="language=='en'" class="heading">Customer Questions</h4>
+           
+               <div ng-repeat='text in data_new'>
+                    <h3 ng-if="language=='ar'" ng-class="'{{text._id}}'">{{text.ar_question}}</h3>
+                    <h3 ng-if="language=='en'" ng-class="'{{text._id}}'">{{text.question}}</h3>
+                    <div>
+                        <p ng-if="language=='ar'" ng-class="'{{text._id}}'">{{text.ar_answer}}
+                        </p>
+                        <p ng-if="language=='en'" ng-class="'{{text._id}}'">{{text.answer}}
+                        </p>
+                    </div>
+                </div>
+        </div>
+    </section>

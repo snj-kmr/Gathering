@@ -1,0 +1,82 @@
+<!-- <nav class="navbar navbar-default colr_chnge" ng-controller="MainCtrl">
+  <div class="container-fluid">
+     Brand and toggle get grouped for better mobile display 
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="logo-img">
+		<img src="home/img/logo.jpg" alt="">
+	  </div>
+    </div>
+
+     Collect the nav links, forms, and other content for toggling 
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right rightmenu">
+       <li><a href="#">Home<span class="sr-only">(current)</span></a></li>
+        <li><a href="#">Join Group</a></li> 
+        <li><a href="/organizers"><i class="fa fa-external-link-square gap_squre" aria-hidden="true"></i>Organizers <span class="sr-only">(current)</span></a></li>
+        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a></li>
+         
+        <li ng-if="!currentUser.email"><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li> 
+        <li ng-if="!currentUser.email"><a href="#" data-toggle="modal" data-target="#myModalsigup">Register</a></li>
+        
+        <li ng-if="currentUser.email" class="last-list dropdown"><a href="#" data-toggle="dropdown"><span><img src="home/img/2.jpg"></span> <i class="caret"></i></a>
+			<ul class="dropdown-menu">
+            <li><a href="/editprofile"><strong>Edit Profile</strong></a></li>
+            <li><a href="changepassword.html"><strong>Change Password</strong></a></li>
+            <li><a href="/home/logout"><strong>Logout</strong></a></li>
+          </ul>
+		</li> 
+      </ul>
+    </div>
+  </div>
+</nav>-->
+
+  <nav class="navbar navbar-default colr_chnge" ng-controller="MainCtrl">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <div class="logo-img">
+		<img src="/home/img/logo.jpg" alt="">
+	  </div>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right rightmenu">
+       <li><a ui-sref="creategroup">Create MO<span class="sr-only">(current)</span></a></li>
+        <li><a ui-sref="organizers">Organizers</a></li> 
+        <li><a ui-sref="contact"><i class="fa fa-external-link-square gap_squre" aria-hidden="true"></i>Contact us <span class="sr-only">(current)</span></a></li>
+        <li><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        <li><a href="#"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></a></li>
+        <li ng-if="!currentUser.email"><a href="#" data-toggle="modal" data-target="#myModal">Login</a></li> 
+        <li ng-if="!currentUser.email"><a href="#" data-toggle="modal" data-target="#myModalsigup">Register</a></li>
+        
+        <li ng-if="currentUser.email" class="last-list dropdown"><a href="#" data-toggle="dropdown">
+                <span>
+                    <img ng-if="!currentUser.image" src="/home/img/2.jpg">
+                    <img ng-if="currentUser.image" ng-src="{{currentUser.image}}">
+                </span>
+                
+                <i class="caret"></i></a>
+        <ul class="dropdown-menu">
+            <li><a ui-sref="editprofile({user_id:currentUser._id})"><strong>Edit Profile</strong></a></li>
+            <li><a ui-sref="changePassword({user_id:currentUser._id})"><strong>Change Password</strong></a></li>
+            <li><a href="/home/logout"><strong>Logout</strong></a></li>
+          </ul>
+		</li> 
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>

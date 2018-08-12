@@ -1,0 +1,252 @@
+    <header id="section-header" class="navbar-fixed-top transition page-header new page-header-semi-transparent ng-scope">
+        <section class="container">
+            <div class="navbar-header language">
+                <ul>
+                    <li><a href="#" ng-click="changeLanguage('en')" tabindex="0">English</a></li>
+                    <li><a href="#" ng-click="changeLanguage('ar')" tabindex="0">Arabic</a></li>
+                </ul>
+            </div>
+            <div class="logo-pic">
+                <a href="#">
+                <img src="/home/images/logo2.png" onclick="window.location.href='/';" alt=""/>
+                <p>Gathering</p>
+                </a>
+            </div>
+        </section>
+    </header>
+    <!--Registration form starts-->
+    <section class="reg-form line">
+        <div class="container">
+            <div id="form-tabs">
+                <p class="active"><i class="fa fa-user" aria-hidden="true"></i><span>Personal Information</span></p>
+                <p><i class="fa fa-id-card" aria-hidden="true"></i><span>Business Information</span></p>
+                <p><i class="fa fa-phone" aria-hidden="true"></i><span>Contact Information</span></p>
+            </div>
+            <form data-toggle="validator" class="form-horizontal" role="form" name="myForm" id="myForm" ng-submit="addForm()" enctype="multipart/form-data">
+                <div id="reg_form">
+                
+                <h4 ng-if="language=='en'" class="heading">Enter your Personal Information</h4>
+                <h4 ng-if="language=='ar'" class="heading">أسئلة العملاء</h4>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">First Name: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="fname" id="fname" ng-model='text.firstname' placeholder="" data-error="First name is required" required>
+                   <!-- <span style="color:blue" ng-show="myForm.user.$dirty && myForm.user.$invalid">
+                <span ng-show="myForm.user.$error.required">Name is </span>
+-->
+                    <!--<span ng-show="myForm.fname.$error.required"></span>-->
+                     <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Last Name: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="lname" id="lname" ng-model='text.lastname' placeholder="" data-error="Last name is required" required>
+                      <!--  <span ng-show="myForm.lname.$error.required"></span>  --> 
+                       <div class="help-block with-errors"></div>  
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="number">Date Of Birth: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="date" class="form-control" name="age" id="age" ng-model='text.age' data-error="Date of birth is required" required>
+                     <!--   <span ng-show="myForm.age.$error.required"></span> -->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="gender">Gender: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="gender" id="gender" ng-model='text.gender' data-error="Gender is required" required>
+                            <option value="">--Select--</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                         <div class="help-block with-errors"></div>
+                      <!--  <span ng-show="myForm.gender.$error.required"></span>-->
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="number">Mobile number: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="number" class="form-control" name="number" id="number" number-mask="" ng-model='text.phone'  placeholder="" data-error="Number is required" required>
+                     <!--   <span ng-show="myForm.mob.$error.required"></span>-->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="email">Email: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="email" id="email" ng-model='text.email' placeholder="" data-error="Email address is invalid" required>
+                        <!--<span ng-show="myForm.email.$error.required"></span>-->
+                         <div class="help-block with-errors"></div>
+                        <!--<span style="color:blue" ng-show="myForm.email.$dirty && myForm.email.$invalid"></span>-->
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label class="control-label col-sm-2" for="password">Password: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="password" class="form-control" data-minlength="6" name="password" id="password" ng-model='text.password' data-error="Passwords must be at least 6 characters" required placeholder="">
+                         <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label class="control-label col-sm-2" for="password">Confirm Password: <strong>*</strong></label>
+                        <div class="col-sm-10">
+                            <input type="password" data-match="#password" class="form-control" name="cpassword" id="cpassword" ng-model='text.cpassword' required placeholder="Rewrite your password">
+                            <!--<span class="error" ng-show="f1.cpassword.$error.">Passwords don't match. </span> -->
+                             <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Job Title: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="title" id="title" ng-model='text.title' data-error="Job title is required" placeholder="Owner, Manager...." required>
+                      <!--  <span ng-show="myForm.title.$error.required"></span>-->
+                       <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <!--<a class="btn" href="javascript:void(0)" id="reg_form_button">Next Link</a>-->
+                    <a href="javascript:void(0)" id="reg_form_button"> Next</a>
+                </div>
+        </div>
+            <div id="business_form">
+                <h4 ng-if="language=='en'" class="heading">Enter your Business Information</h4>
+            <h4 ng-if="language=='ar'" class="heading">أسئلة العملاء</h4>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Business Name: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="cname" id="cname" ng-model='text.org_name' placeholder="" data-error="Bussiness name is required" required>
+                       <!-- <span ng-show="myForm.cname.$error.required"></span>-->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Business Email:</label>
+                    <div class="col-sm-10">
+                        <input type="email" class="form-control" name="cemail" id="cemail" ng-model='text.cont_email' placeholder="">
+                        <!--<span ng-show="myForm.cemail.$error.required"></span>-->
+                         <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Type of business: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="ctype" id="ctype" ng-model='text.org_type' placeholder="Establishment, company, corporate..." data-error="Type is required" required>
+                       <!-- <span ng-show="myForm.ctype.$error.required"></span>-->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Business industry: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="cdiscription" id="cdiscription" ng-model='text.org_description' placeholder="Catering, entertainment…" data-error="This filled is required"  required>
+                       <!-- <span ng-show="myForm.cdiscription.$error.required"></span>-->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="text">Products: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <input type="text" class="form-control" name="cproduct" id="cproduct" ng-model='text.product' placeholder="Chairs, screens, speakers…" data-error="Products is required" required>
+                       <!-- <span ng-show="myForm.cproduct.$error.required"></span>-->
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="sel1">Delivery service: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="delivery" id="delivery" ng-model='text.delivery' data-error="Please select an option" required>
+                            <option value="">--Select--</option>
+                            <option value="Yes">Yes</option>
+                            <option value="No">No</option>
+                        </select>
+                     <!--   <span ng-show="myForm.delivery.$error.required"></span>-->
+                      <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label class="control-label col-sm-2" for="text">Area Covered: <strong>*</strong></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="area" id="area" ng-model='text.area' required data-error="Area is required" placeholder="">
+                            <!--<span ng-show="myForm.area.$error.required"></span>-->
+                             <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-2" for="sel1">Role: <strong>*</strong></label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="role" id="role" ng-model='text.role' data-error="Role is required" required>
+                            <option value="">--Select--</option>
+                            <option value="vendor">Vendor</option>
+                            <option value="planner">Individual Event Planner</option>
+                            <option value="planner_comp">Event Planning Company</option>
+                        </select>
+                      <!--  <span ng-show="myForm.role.$error.required"></span>-->
+                       <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <a href="javascript:void(0)" id="business_form_btn">Next</a>
+                    <!--<button class="btn" id="business_form_btn">Next</button>-->
+                </div>
+            
+        </div>
+        <div id="contact_form">
+         <h4 ng-if="language=='en'" class="heading">Enter your Contact Information</h4>
+            <h4 ng-if="language=='ar'" class="heading">أسئلة العملاء</h4>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="number">Business phone:</label>
+                        <div class="col-sm-10">
+                            <input type="number" class="form-control" id="cno" number-mask="" ng-model='text.org_phone' placeholder="">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-sm-2" for="text">Business address:</label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" id="baddr" ng-model='text.org_address' placeholder="If you have a store">
+                        </div>
+                    </div>
+<!--
+                    <div class="form-group">
+                            <label class="control-label col-sm-2" for="text"></label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="social" ng-model='text.account' required placeholder="Check the next slide">
+                            </div>
+                        </div>-->
+                    
+
+                    <div class="form-group">
+                            <label class="control-label col-sm-2" for="text">Social Media Account:</label>
+                            <div class="col-sm-10">
+                                <input style="margin-bottom: 15px;" type="text" class="form-control" id="instagram" ng-model='text.instagram' placeholder="Instagram Account">
+                                <input style="margin-bottom: 15px;" type="text" class="form-control" id="twitter" ng-model='text.twitter' placeholder="Twitter Account">
+                                <input style="margin-bottom: 15px;" type="text" class="form-control" id="snapchat" ng-model='text.snapchat' placeholder="Snapchat Account">
+                            </div>
+                            </div>
+                        
+                    
+                     <div class="form-group">
+                        <label class="control-label col-sm-2" for="text">City: <strong>*</strong></label>
+                        <div class="col-sm-10">
+                            <input type="text" class="form-control" name="city" id="city" ng-model='text.city' placeholder="" data-error="City is required" required>
+                           <!-- <span ng-show="myForm.city.$error.required"></span>-->
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group span10">
+                        <button class="btn" type="submit" ng-disabled="myForm.$invalid">Let's join Gathering family</button>
+                    </div>
+                    </div>
+                </form>
+            </div>
+    </section>
+
+    <div class="pull-right" id="aaa">
+            <div class="alert alert-danger fade">
+              <button type="button" class="close" data-dismiss="alert">×</button>
+              <h4><strong>Congratulation!</strong></h4>
+               <p>You are successfully registered at Gathering</p>
+            </div>
+          </div>

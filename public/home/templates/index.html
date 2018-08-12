@@ -1,0 +1,332 @@
+<!-- HEADER SECTION -->
+<header id="section-header" class="navbar-fixed-top transition page-header page-header-semi-transparent">
+	<section class="container">
+		<div class="navbar-header language">
+			<ul>
+				<li>
+					<a href="#" id="eng" ng-click="changeLanguage('en')">English</a>
+				</li>
+				<li>
+					<a href="#" id="arab" ng-click="changeLanguage('ar')">Arabic</a>
+				</li>
+			</ul>
+		</div>
+		<div class="sec_navbar">
+			<div id="mySidenav" class="sidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a onclick="closeNav()" href="#Start">Home</a>
+				<a onclick="closeNav()" href="#banner-about-home">About us</a>
+				<a onclick="closeNav()" href="#banner-services">Join Gathering Family</a>
+				<a onclick="closeNav()" href="#banner-portfolio-2">Contact Us</a>
+				<a onclick="closeNav()" href="#testimonial-banner">Our Clients</a>
+				<a onclick="closeNav()" href="#banner-blog">FAQs</a>
+			</div>
+			<div id="main">
+				<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+			</div>
+		</div>
+		<nav class="collapse navbar-collapse navHeaderCollapse ">
+			<ul id="aaa" class="nav navbar-nav navbar-right transition">
+				<li class="dropdown">
+					<a href="#Start" class="link link-btn menu-link">{{ 'Home' | translate }}</a>
+				</li>
+				<li class="dropdown">
+					<a href="#banner-about-home" class="link link-btn menu-link">
+						{{ 'About Us' | translate }}
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#banner-services" class="link link-btn menu-link">
+						{{ 'Join Gathering Family' | translate }}
+					</a>
+				</li>
+				<li class="dropdown mega-dropdown">
+					<a href="#banner-portfolio-2" data-toggle="dropdown">{{'Contact Us' | translate }}</a>
+				</li>
+				<li class="dropdown">
+					<a href="#testimonial-banner" class="link link-btn menu-link">
+						{{ 'Our Clients' | translate }}
+					</a>
+				</li>
+				<li class="dropdown">
+					<a href="#banner-blog" class="dropdown-toggle">{{'FAQs' | translate }}</a>
+				</li>
+			</ul>
+		</nav>
+	</section>
+</header>
+<!-- end of search overlay -->
+<!-- BODY SECTION -->
+<section id="Start">
+	<!-- BANNER - carousel full page -->
+	<section id="banner-about-fullscreen" class="col-xs-12 no-padding">
+		<div class="container">
+			<div class="col-lg-5 col-md-5 col-xs-12">
+				<div class="logo_main">
+						<img class="logo" src="/home/images/mobile_logo.png" onclick="window.location.href='/';">
+				</div>
+			</div>
+			<div class="col-lg-7 col-md-7 col-xs-12">
+				<div class="content_main">
+						<h1 class="title text-uppercase black transition">GATHERING</h1>
+						<p class="lead black text-uppercase transition">{{'Behind every gathering is a great story' | translate }}</p>
+
+					<div class="app_img">
+						<div class="google_app">
+                                                    <a href="#"><img src="/home/images/apple.png"></a>
+						</div>
+						<div class="google_app">
+                                                    <a href="#"><img src="/home/images/google.png"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!-- INTRO PARA -->
+	<section class="col-xs-12 intro">
+		<section class="container text-center">
+			<div class="col-xs-12 col-sm-12 col-md-12 text-left">
+				<h4 class="lead-title vthick border-full">{{'Know About Us' | translate }}</h4>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 text-left">
+				<h5 class="lead-title">{{'Our' | translate }}
+					<strong>{{'Mission' | translate }}</strong>
+				</h5>
+				<p ng-if="language=='en'" class="lead-border-left border-black">{{text.mission}}</p>
+				<p ng-if="language=='ar'" class="lead-border-left border-black">{{text.ar_mission}}</p>
+			</div>
+			<div class="col-xs-12 col-sm-6 col-md-4 text-left">
+				<h5 class="lead-title">{{'Our' | translate }}
+					<strong>{{'Vision' | translate }}</strong>
+				</h5>
+				<p ng-if="language=='en'" class="lead-border-left border-black" ng-bind="text.vision"></p>
+				<p ng-if="language=='ar'" class="lead-border-left border-black" ng-bind="text.ar_vision"></p>
+			</div>
+		</section>
+	</section>
+	<!-- about BANNER -->
+	<section id="banner-about-home" class="col-xs-12 banner-200">
+		<div class="overlay"></div>
+		<section class="container">
+			<section class="col-sm-12 banner-title">
+				<h1 class="title text-uppercase">{{'about' | translate }}</h1>
+				<span>{{'Who We Are' | translate }}</span>
+			</section>
+		</section>
+	</section>
+
+	<section id="content-about" class="col-xs-12 main-section-margins">
+		<section class="container">
+			<section class="col-xs-12 col-md-4 text-right" ng-model="mission">
+				<h4 class="lead-title lead-border-bottom border-black">{{'ABOUT' | translate }}
+					<strong>{{'GATHERING' | translate }}</strong>
+				</h4>
+				<div class="para01">
+					<p ng-if="language=='en'" ng-bind-html="text.about"> </p>
+					<p ng-if="language=='ar'" ng-bind-html="text.ar_about"> </p>
+				</div>
+				<section class="col-xs-12 col-md-12 text-right" ng-model="mission" style="padding:0px;">
+					<h4 class="lead-title lead-border-bottom border-black">{{'ABOUT' | translate }}
+						<strong>{{'THE FOUNDERS' | translate }}</strong>
+					</h4>
+					<div class="para01">
+						<p ng-if="language=='en'" ng-bind-html='text.abouts'> </p>
+						<p ng-if="language=='ar'" ng-bind-html='text.ar_abouts'> </p>
+					</div>
+				</section>
+			</section>
+			<section class="col-xs-12 col-md-8 random-images">
+				<div class="test">
+					<img class="img-one" src="{{text.image}}" alt="" />
+					<img class="img-two" src="{{text.image1}}" alt="" />
+					<img class="img-three" src="{{text.image2}}" alt="" />
+					<img class="img-four" src="{{text.image3}}" alt="" />
+				</div>
+			</section>
+		</section>
+	</section>
+	<!-- services BANNER -->
+	<section id="banner-services" class="col-xs-12 banner-200">
+		<div class="overlay"></div>
+		<section class="container">
+			<section class="col-sm-12 banner-title">
+				<h1 class="title text-uppercase">{{'Join' | translate }}&nbsp;{{'Gathering' | translate }}</h1>
+				<span>{{'Join our Creative Community' | translate }}</span>
+			</section>
+		</section>
+	</section>
+	<div class="line">
+            <div class="container"></div>
+            <button class="btn" onclick="window.location.href='/form';">{{"Join Us" | translate }}</button>
+	</div>
+	<!-- portfolio BANNER -->
+	<section id="banner-portfolio-2" class="col-xs-12 banner-200">
+		<div class="overlay"></div>
+		<section class="container">
+			<section class="col-sm-12 banner-title">
+				<h1 class="title text-uppercase">{{'Contact' | translate }}&nbsp;&nbsp;{{'Us' | translate }}</h1>
+				<span>{{'Happy to help' | translate }}</span>
+			</section>
+		</section>
+	</section>
+	<!-- portfolio -->
+	<section class="col-xs-12 main-section-padding-bottom">
+		<section class="container">
+			<!-- animated portfolio filter links -->
+			<section class="section section--menu text-center">
+				<span class="link-copy"></span>
+			</section>
+		</section>
+
+		<section class="container">
+			<ul id="grid-list-3" class="grid-layout">
+				<li class="col-xs-6 col-md-4 entry webd">
+					<figure>
+						<img src="/home/images/technical.png" alt="portfolio" class="img-responsive transition" />
+						<h5 class="heading-sm">
+							<span>{{'Technical Problem' | translate }}</span>
+						</h5>
+					</figure>
+					<div class="item-icons">
+						<a data-lightbox="project-1" data-title="">
+							<span class="icon" style="padding:14px 18px;" onclick="window.location.href='/technical'">Proceed</span>
+						</a>
+					</div>
+				</li>
+				<li class="col-xs-6 col-md-4 entry web">
+					<figure>
+						<img src="/home/images/p10.png" alt="portfolio" class="img-responsive transition" />
+						<h5 class="heading-sm">
+							<span>{{'Recommendation, Complaint, Question' | translate }}</span>
+						</h5>
+					</figure>
+
+					<div class="item-icons">
+						<a data-lightbox="project-3" data-title="">
+							<span class="icon" style="padding:14px 18px;" onclick="window.location.href='/recommandation'">Proceed</span>
+						</a>
+					</div>
+				</li>
+				<li class="col-xs-6 col-md-4 entry web ui">
+					<figure>
+						<img src="/home/images/helo.png" alt="portfolio" class="img-responsive transition" />
+						<h5 class="heading-sm">
+							<span>{{'Say Hello!' | translate }}</span>
+						</h5>
+					</figure>
+					<div class="item-icons">
+						<p ng-if="language=='en'" style="color:#cb9e4a;padding:0px; font-size:25px;">We would love to hear from you!</p>
+						<p ng-if="language=='ar'" style="color:#cb9e4a;padding:0px; font-size:25px;">We would love to hear from you! </p>
+						<p style="padding:0px;margin:0px;">Phone: +966561665961</p>
+						<p>Email: info@gathering-sa.com</p>
+					</div>
+				</li>
+			</ul>
+		</section>
+	</section>
+
+	<!-- testimonial BANNER -->
+	<section id="testimonial-banner" class="col-xs-12 banner-200">
+		<div class="overlay"></div>
+		<section class="container">
+			<section class="col-sm-12 banner-title">
+				<h1 class="title text-uppercase">{{'Our' | translate }}&nbsp;{{'Clients' | translate }}</h1>
+				<span>{{'Happy Customers' | translate }}</span>
+			</section>
+		</section>
+	</section>
+
+	<!-- clients logo -->
+	<section class="col-xs-12 client-logo">
+		<section class="container">
+			<div class="transition col-sm-5 counter-container">
+				<span class="counter project-counter">{{businesses.length}}</span>
+				<span>{{'Number of Stores and Event planner companies' | translate }}</span>
+			</div>
+			<div class="col-sm-6 col-sm-offset-1">
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-3.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-2.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-3.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-2.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-3.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<figure class="col-xs-6 col-md-4">
+					<a href="#">
+						<img src="/home/images/client-4.jpg" class="img-responsive" alt="client" />
+					</a>
+				</figure>
+				<button class="btn" onclick="window.location.href='/client'">{{'View more Clients' | translate }}</button>
+			</div>
+		</section>
+	</section>
+
+	<!-- blog BANNER -->
+	<section id="banner-blog" class="col-xs-12 banner-200">
+		<div class="overlay"></div>
+		<section class="container">
+			<section class="col-sm-12 banner-title">
+				<h1 style="text-transform: capitalize;" class="title text-uppercase">{{'FAQs' | translate }}</h1>
+				<span style="margin-left:186px;">{{'Frequently asked' | translate }}</span>
+			</section>
+		</section>
+	</section>
+
+	<section id="blog-list" class="col-xs-12 main-section-margins">
+		<section class="container text-center">
+			<section id="grid-list" class="more-padding">
+				<div class="blog-list-row">
+					<div class="entry col-md-6" onclick="window.location.href='/faq'">
+						<article id="second-article" class="text-left block">
+							<a href="/faq">
+								<div class="blog-header">
+									<div class="blog-date col-xs-1 col-md-1">
+										<img src="/home/images/quest.png">
+									</div>
+									<h5 class="blog-title col-xs-11 col-md-10">{{'Customers Questions' | translate }}</h5>
+								</div>
+							</a>
+						</article>
+					</div>
+					<div class="entry col-md-6" onclick="window.location.href='/faqs'">
+						<article id="third-article" class="text-left block">
+							<a href="/faqs">
+								<div class="blog-header">
+									<div class="blog-date col-xs-1 col-md-1">
+										<img src="/home/images/quest.png">
+									</div>
+									<h5 class="blog-title col-xs-11 col-md-10">{{'Service Provider Questions' | translate }}
+									</h5>
+								</div>
+							</a>
+						</article>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+	<!-- BODY SECTION ENDS HERE -->
+</section>  -->
+	<!--</div>-->
+	<a href="#" class="scrollToTop">
+		<img src="/home/images/arrow_up.png">
+	</a>

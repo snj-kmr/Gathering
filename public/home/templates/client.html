@@ -1,0 +1,40 @@
+   <header id="section-header" class="navbar-fixed-top transition page-header new page-header-semi-transparent ng-scope">
+        <section class="container">
+            <div class="navbar-header language">
+                <ul>
+                    <li><a href="#" ng-click="changeLanguage('en')" tabindex="0">English</a></li>
+                    <li><a href="#" ng-click="changeLanguage('ar')" tabindex="0">Arabic</a></li>
+                </ul>
+            </div>
+            <div class="logo-pic">
+                <a href="#">
+                <img src="/home/images/logo2.png" onclick="window.location.href='/';" alt=""/>
+                <p>Gathering</p>
+                </a>
+            </div>
+        </section>
+    </header>
+    
+   <section class="clients">
+       <div class="container">
+           <h3 ng-if="language=='en'" class="heading">Our Clients</h3>
+            <h3 ng-if="language=='ar'" class="heading">أسئلة العملاء</h3>
+   
+           <p ng-if="language=='en'">
+               We are proud to be a part of the great things our clients achieve.
+           </p>
+           <p ng-if="language=='ar'">
+               We are proud to be a part of the great things our clients achieve.
+           </p>
+           <ul class="list-inline">
+               <li><img src="/home/images/client-2.jpg" alt=""></li>
+               <li><img src="/home/images/client-3.jpg" alt=""></li>
+               <li><img src="/home/images/client-4.jpg" alt=""></li>
+               <li><img src="/home/images/client-2.jpg" alt=""></li>
+               <li><img src="/home/images/client-3.jpg" alt=""></li>
+               <li><img src="/home/images/client-4.jpg" alt=""></li>
+               <li><img src="/home/images/client-2.jpg" alt=""></li>
+               <li><img src="/home/images/client-3.jpg" alt=""></li>
+           </ul>
+       </div>
+   </section>

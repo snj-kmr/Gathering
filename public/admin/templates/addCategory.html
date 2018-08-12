@@ -1,0 +1,73 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            Categories
+            <small>Add category</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/userList"><i class="fa fa-dashboard"></i> Categories</a></li>
+            <li class="active">Add new category</li>
+        </ol>
+    </section>
+    <section class="content">
+
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Add new category</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <!-- form start -->
+
+                    <form role="form" ng-submit="addCategory()" enctype="multipart/form-data">
+                        <div class="box-body">
+
+                            <div class="form-group">
+                                <h3>Name</h3>
+                                <label for="exampleInputPassword1">English</label>
+                                <input type="text" class="form-control" name='Name' ng-model='cat.name' required="" placeholder="Category Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Arabic</label>
+                                <input type="text" class="form-control" name='Name' ng-model='cat.ar_name' required="" placeholder="اسم التصنيف">
+                            </div>
+                            <div class='form-group'>
+                                    <select name="role" class="form-control" ng-model='cat.type' required="">    
+                                        <option value="">--Select Type--</option>
+                                        <option value="product">Product</option>
+                                        <!--<option value="organizer">Organizer</option>-->
+                                        <option value="service">Service</option>
+                                    </select>
+                            </div>
+
+                            <!--<div class='form-group' ng-if='cat.type == "service"'>
+                                <label for="exampleInputPassword1">Days required prior to avail the service (optional)</label>
+                                <input type="number" class="form-control" name='Name' ng-model='cat.prior_days' placeholder="Type here ">
+                           
+                            </div>-->
+                            <div class="uploadimg">
+                                <input type="file" name="file" onchange="angular.element(this).scope().uploadFile(this)" id="photo-upload"  required=""/>
+                                    <p ng-show="loading">...UPLOADING...</p>
+                                    <h4 class="uploadbtn">Upload Image</h4>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                        <div class="box-footer">
+                            <input type="submit" name="submit" value="Add Category" class='btn btn-primary'>                   
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

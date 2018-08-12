@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" ng-app='gathering.home' ng-controller="technicalCtrl">
+<head>
+  <meta charset="utf-8">
+  <title>Gathering</title>
+  <meta name="description" content="ghost clone javascript blog node.js angular.js">
+  <meta name="author" content="Connor Leech">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <!-- Angular Material CSS -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link rel="stylesheet" href="/home/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/home/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/home/css/font-awesome.css">
+  <link href="/home/css/global.css" type="text/css" rel="stylesheet" media="all">
+  <!-- the font used in the template -->
+  <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'> 
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">	
+<!--register Reviews-->
+   <link rel="stylesheet" href="/home/css/style.css">
+    <link rel="stylesheet" href="/home/css/styles.css">
+</head>
+<body class="{{$root.bodylayout}}">
+  <div ng-include="'/home/templates/technical.html'"></div>
+  <div ng-include="'/home/templates/common/footer.html'"></div>
+<!-- Main Content -->
+  <!--<div ui-view></div>-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="/home/js/js/modernizr-2.5.3.min.js"></script>
+  <!--Validator-->
+  <script src="/home/js/js/validator.js"></script>
+<!--ARABIC SANTIZER-->
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.16/angular-sanitize.min.js"></script>
+<script src="http://rawgit.com/PascalPrecht/bower-angular-translate/master/angular-translate.min.js"></script>
+<script src="https://cdn.rawgit.com/showdownjs/showdown/1.0.2/dist/showdown.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- Angular Material Dependencies -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+  <!-- UI Router -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+  <!-- Angular Material -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/0.10.0/angular-material.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.10.2/validator.min.js"> </script>
+   <!-- Custom JS -->
+  <script src='/home/js/app.js'></script>
+  <script src='/home/js/controllers/main.js'></script>
+  <!-- add modules -->
+  <script src='/common/modules/users.js'></script>
+   <script src='/common/modules/faqs.js'></script>
+  <script src='/common/modules/webPageFront.js'></script>
+    <script src='/common/modules/problem.js'></script>
+  <script>
+    setTimeout(function(){ 
+    $(document).ready(function () {
+      $('#myForm').validator()
+      $(".btn").on("click", function () {
+      $("#aaa").addClass("span4");
+      $(".alert").removeClass("in").show();
+      $(".alert").delay(200).addClass("in").fadeOut(5000);
+      });
+    });
+  }, 1000);
+  </script>
+</body>
+</html>

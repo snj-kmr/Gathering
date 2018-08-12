@@ -1,0 +1,125 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+           Web Pages
+            <small>Edit WebPages</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/webPages"><i class="fa fa-dashboard"></i> webPages</a></li>
+            <li class="active">Edit webPages</li>
+        </ol>
+    </section>
+    <section class="content">
+
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">Edit webPages</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                     <form role="form" ng-submit="editContent()" enctype="multipart/form-data">
+                        <div class="box-body">
+                            <div class="form-group">
+                                <h3>Our Mission</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.mission'  placeholder="Our Mission"> </textarea>
+                             
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1"> Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_mission'  placeholder="الهدف"> </textarea>
+        
+                            </div>
+            
+                            <div class="form-group">
+                                <h3>Our Vision</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.vision'  placeholder="Our Vision"> </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">  Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_vision'  placeholder="الرؤية"> </textarea>
+                            </div>
+                            <div class="form-group">
+                                <h3>About Gathering</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.about'  placeholder="About Gathering"> </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">  Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_about'  placeholder="وصف المنتج"> </textarea>
+                            </div>
+
+                              <div class="form-group">
+                                <h3>About The Founder</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.abouts'  placeholder="About The Founder"> </textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">  Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_abouts'  placeholder="ماهو قاذرينق؟"> </textarea>
+                            </div>
+
+                            <div class="uploading">
+                                <h4 class="uploadbtn">Upload Image 1</h4>
+                                <!--<img ng-src="{{item.image || '//:0'}}"  />-->
+                                <input type="file" name="file" id="file" class="input-text"  ngf-select ng-model="text.image" onchange="angular.element(this).scope().uploadFile(this)" id="photo-upload"  />
+                                    <p ng-show="loading">...UPLOADING...</p>
+                                    <img ng-show="imgshow1" ngf-src="imgshow1" style="width:200px;" class="thumb">
+                                    <img src="{{text.image}}" style="width:200px;" />
+                                    
+                            </div>
+                            <div class="uploading">
+                                <h4 class="uploadbtn">Upload Image 2</h4>
+                                <!--<img ng-src="{{item.image || '//:0'}}"  />-->
+                                <input type="file" name="file" id="file" class="input-text"  ngf-select ng-model="text.image1" onchange="angular.element(this).scope().uploadFile1(this)" id="photo-upload"  />
+                                    <p ng-show="loading1">...UPLOADING...</p>
+                                    <img ng-show="imgshow2" ngf-src="imgshow2" style="width:200px;" class="thumb">
+                                    <img src="{{text.image1}}" style="width:200px;" />
+                                    
+                            </div>
+                            <div class="uploading">
+                                <h4 class="uploadbtn">Upload Image 3</h4>
+                                <!--<img ng-src="{{item.image || '//:0'}}"  />-->
+                                <input type="file" name="file" id="file" class="input-text"  ngf-select ng-model="text.image2" onchange="angular.element(this).scope().uploadFile2(this)" id="photo-upload"  />
+                                    <p ng-show="loading2">...UPLOADING...</p>
+                                    <img ng-show="imgshow3" ngf-src="imgshow3"  class="thumb">
+                                    <img src="{{text.image2}}" style="width:200px;" />
+                                    
+                            </div>
+                            <div class="uploading">
+                                <h4 class="uploadbtn">Upload Image 4</h4>
+                                <!--<img ng-src="{{item.image || '//:0'}}"  />-->
+                                <input type="file" name="file" id="file" class="input-text"  ngf-select ng-model="text.image3" onchange="angular.element(this).scope().uploadFile3(this)" id="photo-upload"  />
+                                    <p ng-show="loading3">...UPLOADING...</p> 
+                                    <img ng-show="imgshow4" ngf-src="imgshow4" class="thumb">
+                                    <img src="{{text.image3}}" style="width:200px;"  />                               
+                            </div>
+                            <br>
+                            <div class="form-group">
+                            <input type='hidden' placeholder='blog' ng-model='text.id' name='id' class='form-control'>
+                             </div>
+                            
+                        
+                        <!-- /.box-body -->
+                        <div class="form-group">
+                            <button type="submit" name="submit"  value="Update" class='btn btn-primary'>Update 
+                            </button>                
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

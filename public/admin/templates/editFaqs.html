@@ -1,0 +1,75 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header" >
+        <h1>
+           FAQs
+            <small>FAQs</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/admin/dashboard#/faqsList"><i class="fa fa-dashboard"></i> FAQs</a></li>
+            <li class="active">FAQs</li>
+        </ol>
+    </section>
+    <section class="content">
+
+
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-6">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header with-border">
+                        <h3 class="box-title">FAQs</h3>
+                    </div>
+                    <div class="form-group">
+                        <div class="alert alert-success" ng-show="message">
+                            <strong ng-bind="message" ></strong> 
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                     <form role="form" ng-submit="editFaqs()" enctype="multipart/form-data">
+                        <div class='form-group'>
+                                    <select name="role" class="form-control" ng-model='text.type' required="">    
+                                        <option value="">--Select Faqs--</option>
+                                        <option value="customer">CUSTOMERS FAQs</option>
+                                        <option value="service">SERVICE PROVIDER FAQs</option>
+                                    </select>
+                            </div>
+                            
+                             <div class="form-group">
+                                <h3>Question</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.question' required="" placeholder="Enter Questions"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">  Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_question'  placeholder="كوستومر كوسشنس"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <h3>Answer</h3>
+                                <label for="exampleInputPassword1"> English </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.answer' required="" placeholder="Enter Questions"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">  Arabic </label>
+                                <textarea class="form-control" name='Name'  ng-model='text.ar_answer'  placeholder="كوستومر كوسشنس"></textarea>
+                            </div>
+                         <br>
+                            <div class="form-group">
+                            <input type='hidden' placeholder='blog' ng-model='text.id' name='id' class='form-control'>
+                             </div>
+                            
+                        
+                        <!-- /.box-body -->
+                        <div class="form-group">
+                            <button type="submit" name="submit"  value="add" class='btn btn-primary'>Add
+                            </button>                
+                        </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

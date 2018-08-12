@@ -1,0 +1,263 @@
+/*Registration form css starts*/
+
+.reg-form.line {
+    margin-top: 70px;
+}
+
+.reg-form.line a span {
+    padding: 0;
+}
+
+
+
+.reg-form.line a span {
+    padding: 0;
+    letter-spacing: 0;
+    margin-top: 10px;
+}
+
+.reg-form .form-horizontal {
+    background-color: #eee;
+    padding: 50px 80px 40px;
+    overflow: hidden;
+    width:100%;
+    float: left;
+    margin-top: 60px;
+}
+.reg-form .form-horizontal #age{
+    color: #999;
+}
+.reg-form form h4 {
+    letter-spacing: 5px;
+    margin: 50px 0;
+}
+
+.reg-form form button {
+    margin-top: 20px;
+}
+.reg-form label strong {
+    color: red;
+    position: relative;
+    top: -3px;
+}
+.btn.focus, .btn:focus, .btn:hover {
+    color: #fff;
+    outline: none;
+    text-decoration: none;
+}
+#form-tabs p .fa {
+    font-size: 70px;
+    display: block;
+}
+
+#form-tabs p {
+    display: inline-block;
+    margin: 0 50px;
+    background-color: #eee;
+    padding: 30px 10px;
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: relative;
+}
+#form-tabs .active span {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+#form-tabs span {
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #41444b;
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+#form-tabs p.active {
+    color: #fff;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5c54e+0,f5de6f+100&1+0,0.89+100 */
+background: -moz-linear-gradient(top, rgba(229,197,78,1) 0%, rgba(245,222,111,0.89) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(229,197,78,1) 0%,rgba(245,222,111,0.89) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(229,197,78,1) 0%,rgba(245,222,111,0.89) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5c54e', endColorstr='#e3f5de6f',GradientType=0 ); /* IE6-9 */
+}
+
+.btn,form a#reg_form_button, form a#business_form_btn{
+    font-family: ithra-light;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.control-label {
+    padding: 10px 0;
+}
+
+#form-tabs p:first-child::after,
+#form-tabs p:nth-child(2)::after {
+    content: "\f101";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    font-family: fontawesome;
+    color: #333;
+    font-size: 50px;
+    left: 145px;
+    top: 65px;
+}
+
+#form-tabs p.active::after {
+    color: #CC9F42;
+}
+
+/*Registration form css ends*/
+
+/*FAQ starts*/
+
+.faq {
+	padding: 40px 0;
+	background: #f1f1f1;
+}
+.faq div.ng-scope {
+	background: #fff;
+	box-shadow: 0 0 13px #eee;
+	padding: 10px 40px;
+	margin: 10px 0;
+}
+.faq h3 {
+	font-size: 22px;
+	letter-spacing: 2px;
+	color: #CC9F42;
+	border-bottom: 2px dashed #ddd;
+	padding-bottom: 5px;
+	display: inline-block;
+}
+.faq h4.heading {
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 40px;
+	letter-spacing: 5px;
+	margin-top: 0;
+}
+
+/*FAQ Ends*/
+
+/*New header*/
+.logo-pic {
+	width: 20%;
+	margin: 10px auto;
+	text-align: center;
+}
+.logo-pic img {
+	max-width: 100%;
+    height: auto;
+}
+.logo-pic p {
+    font-size: 20px;
+    color: #41444b;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	margin: 10px 0 0;
+}
+.page-header.new{
+    height: auto;
+    padding-bottom: 0;
+    position: static;
+    margin-bottom: 0;
+}
+/*New header ends*/
+
+/*Employee details*/
+.progress-bars .lead-border-bottom {
+	padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+.progress-bars .lead-border-bottom h5{ 
+font-size: 14px;
+    letter-spacing: 7px;
+}
+.progress-bars .lead-border-bottom::after{
+    height: 4px;
+}
+.progress-bars .unline{
+    position: relative;
+    overflow: hidden;
+}
+.progress-bars .unline::after {
+	background: #eee;
+	height: 3px;
+	width: 100%;
+	top: 45px;
+	position: absolute;
+	overflow: hidden;
+	clear: both;
+	content: "";
+	left: 0;
+	z-index: -1;
+}
+.list-unstyled {
+    padding-left: 0;
+    text-align: right;
+    list-style: none;
+}
+/*Employee details ends*/
+/*Next button*/
+form a#reg_form_button, form a#business_form_btn {
+    width: 15%;
+    margin: auto;
+    display: block;
+    border: 2px solid #cb9e4a;
+    color:#cb9e4a;
+    height: 45px;
+    font-size: 18px;
+    line-height: 40px;
+    margin-top: 20px;
+    background: transparent;
+}
+
+/*Clients page css*/
+.clients{
+    padding: 30px 0;
+}
+.clients h3 {
+	font-weight: 600;
+    font-size: 36px;
+}
+.clients p {
+	font-size: 17px;
+    margin-bottom: 40px;
+}
+.clients .list-inline > li {
+	padding: 40px 20px;
+	border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}
+.clients .list-inline > li:nth-child(5), .clients .list-inline > li:nth-child(6), .clients .list-inline > li:nth-child(7), .clients .list-inline > li:nth-child(8) {
+	border-bottom: 0;
+}
+.clients .list-inline > li:nth-child(4n+4) {
+	border-right: 0;
+}
+.entry{
+    cursor: pointer;
+}
+
+/*Number Validation*/
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+/*End*/
+
+.owl-controls {
+    display:none;
+}
